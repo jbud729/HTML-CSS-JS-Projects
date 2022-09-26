@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Form Practice</title>
+</head>
+
+<body>
+  <script>
+    /*
+    function check() {
+     let firstname = document.getElementById("fname").value;
+     let lasstname = document.getElementById("lname").value;
+     document.getElementById("option").innerHTML = firstname + " " + lasstname;
+    }
+    */
+  </script>
+
+  <form >
+    <div>
+      <label for="fname">first name:</label>
+      <input id="fname" type="text" name="name" placeholder="spongebob">
+    </div>
+
+    <br>
+
+    <div>
+      <label for="lname">last name:</label>
+      <input id="lname" type="text" name="myName" placeholder="squarepants" required>
+    </div>
+
+    <br>
+
+    <div>
+      <label for="pass">password:</label>
+      <input type="password" id="pass" name="pass" maxlength="12" required>
+    </div>
+
+    <br>
+
+    <div>
+      <label for="email">email:</label>
+      <input type="email" id="email" name="email" placeholder="SPants@gmail.com">
+    </div>
+
+    <br>
+
+    <div>
+      <label for="phone">phone #:</label>
+      <input type="tel" id="phone" name="phone">
+    </div>
+
+    <br>
+
+    <div>
+      <label for="bdate">birthdate:</label>
+      <input type="date" id="bdate" name="bdate">
+    </div>
+
+    <br>
+
+    <div>
+      <label for="quantity">quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="0" max="99" value="1">
+    </div>
+
+    <br>
+
+    <div>
+      <label for="title">title</label>
+
+      <label for="Mr.">Mr.</label>
+      <input type="radio" name="title" value="Mr." id="Mr.">
+      
+      <label for="Mrs.">Mrs.</label>
+      <input type="radio" name="title" value="Mrs." id="Mrs.">
+
+      <label for="PhD.">PhD.</label>
+      <input type="radio" name="title" value="PhD." id="PhD.">
+    </div>
+
+    <br>
+
+    <div>
+      <label for="payment">payment:</label>
+      <select id="payment" name="payment">
+        <option value="Visa">Visa</option>
+        <option value="Mastercard">Mastercard</option>
+        <option value="Giftcard">Giftcard</option>
+      </select>
+    </div>
+
+    <br>
+
+    <div>
+      <label for="subscribe">Checkbox</label>
+      <input type="checkbox" name="subscribe" id="subscribe">
+    </div>
+
+    <br>
+
+    <div>
+      <input type="range" min="0" max="20" value="0">
+    </div>
+
+    <br>
+
+    <div>
+      <input type="week">
+    </div>
+
+    <br>
+
+    <div>
+      <input type="reset">
+    </div>
+
+    <br>
+
+    <div>
+      <input type="submit" onclick="check(); return false">
+    </div>
+
+    <p id="option"></p>
+
+  </form>
+
+</body>
+
+</html>
