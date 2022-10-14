@@ -1,2 +1,3 @@
 # HTML-CSS-Practice
-Projects to help develop HTML-CSS skills. 
+ Developing HTML-CSS skills
+
