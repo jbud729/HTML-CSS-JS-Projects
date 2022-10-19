@@ -3,21 +3,12 @@
 <html>
 
 <head>
+  <link href="form.css" rel="stylesheet">
   <title>Form Practice</title>
 </head>
 
 <body>
-  <script>
-    /*
-    function check() {
-     let firstname = document.getElementById("fname").value;
-     let lasstname = document.getElementById("lname").value;
-     document.getElementById("option").innerHTML = firstname + " " + lasstname;
-    }
-    */
-  </script>
-
-  <form >
+  <form id = "my-form">
     <div>
       <label for="fname">first name:</label>
       <input id="fname" type="text" name="name" placeholder="spongebob">
@@ -27,14 +18,14 @@
 
     <div>
       <label for="lname">last name:</label>
-      <input id="lname" type="text" name="myName" placeholder="squarepants" required>
+      <input id="lname" type="text" name="myName" placeholder="squarepants">
     </div>
 
     <br>
 
     <div>
       <label for="pass">password:</label>
-      <input type="password" id="pass" name="pass" maxlength="12" required>
+      <input type="password" id="pass" name="pass" maxlength="12">
     </div>
 
     <br>
@@ -119,13 +110,15 @@
     <br>
 
     <div>
-      <input type="submit" onclick="check(); return false">
+      <input type="submit">
     </div>
 
     <p id="option"></p>
 
   </form>
 
-</body>
+  <div id="info"></div>
 
+<script src="form.js"></script>
+</body>
 </html>
