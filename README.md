@@ -1,3 +1,3 @@
-# HTML-CSS-Practice
- Developing HTML-CSS skills
+# HTML-CSS-JS Practice
+ Developing HTML, CSS, and JS skills
 
