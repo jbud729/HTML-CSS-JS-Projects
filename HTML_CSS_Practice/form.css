@@ -1,0 +1,13 @@
+input[type='submit'] {
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+
+input[type='reset'] {
+  background-color: green;
+  color: white;
+  border: none;
+}
+
