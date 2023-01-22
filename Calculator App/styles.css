@@ -1,0 +1,23 @@
+body {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.calc-container {
+  border: 1px solid black;
+}
+
+.calc-buttons-row {
+  display: flex;
+  justify-content: end;
+}
+
+.calc-screen {
+  text-align: end;
+  margin-bottom: 20px;
+}
+
+
+
