@@ -27,27 +27,25 @@ buttonArr.forEach(function (button) {
 
 
 function handleNumber(pressedNumber) {
-  // change 0 to number pressed
-  if (screen.value == 0) {
+    //if a number is pressed after a calculation has been done with equals sign
+    //then the number pressed will replace whatever is on screen
+   if(calculationFinished === true) {
+    currentTotal = 0;
     screen.value = pressedNumber.innerText;
-    console.log(isOperator);
+    calculationFinished = false;
+    // change 0 to number pressed
+  }else if (screen.value == 0) {
+    screen.value = pressedNumber.innerText;
     // if operator is pressed, the next number pressed will replace 
     //value on screen. Also, this notifies the screen is changing for 
     //the secondNum
   }else if (isOperator === true) {
     screen.value = pressedNumber.innerText;
-    isOperator = false;
     screenChangeForSecondNum = true;
-    //if a number is pressed after a calculation has been done with equals sign
-    //then the number pressed will replace whatever is on screen
-  }else if(calculationFinished === true) {
-    currentTotal = 0;
-    screen.value = pressedNumber.innerText;
-    calculationFinished = false;
-    // will keep stringing numbers together
   }else{
     screen.value += pressedNumber.innerText;
     }
+    isOperator = false;
   }
   
 
@@ -65,15 +63,36 @@ function handleSymbol(pressedSymbol) {
     case '/':
     case '*':
       isOperator = true;
+      // if calculation got finished with previously using an equals sign
+      // and an op is pressed, we change calcFin. back to false so it
+      // will not replace the screen value twice
+      if (calculationFinished === true) {calculationFinished = false;}
       handleMathOp(pressedSymbol);
       break;
 
     case '=':
       handleMathEquals();
       break;
+
+    case 'Del':
+      deleteNumber();
   }
 }
 
+function deleteNumber() {
+  if (isOperator === true) {
+    return;
+  }else if (calculationFinished === true) {
+    firstNum = secondNum = currentOperator = null;
+    screenChangeForSecondNum = false;
+    isOperator = false;
+  }else if (screen.value.length == 1) {
+    screen.value = 0;
+  }else{
+    // .substring(starting location, ending location(up to, will not include))
+    screen.value = (screen.value).substring(0,((screen.value).length) - 1);
+  }
+}
 
 function handleMathOp(pressedOperator) {
    // assign firstNum with screen text
