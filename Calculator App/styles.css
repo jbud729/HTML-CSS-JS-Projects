@@ -42,6 +42,11 @@ button {
 }
 
 .clear {
+  background-color: red;
+  color: white;
+}
+
+.delete {
   background-color: darkgray;
   color: white;
 }

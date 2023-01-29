@@ -1,5 +1,5 @@
 
-//What to work on: Fix the zero issue, a back button, maybe more with the design.
+//What to work on: maybe more with the design. Also, making long decimals fit screen. 
 
 let screen = document.querySelector('.calc-screen');
 const buttons = document.querySelectorAll('button');
